@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">DataBindingDemo</string>
 
+    <!-- activity descriptions -->
     <string name="textBasicBinding">basic user binding</string>
+    <string name="textLayoutDetails">layout details binding</string>
+
+    <!-- detail headers-->
+    <string name="detailHeaderImports">imports</string>
+
+    <string name="detailContentVisibility">visibility example</string>
 </resources>

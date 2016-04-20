@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.androidistanbul.databindingdemo.basic.BasicBindingActivity;
 import com.androidistanbul.databindingdemo.databinding.ActivityMainBinding;
+import com.androidistanbul.databindingdemo.layoutdetails.LayoutDetailsActivity;
 
 /**
  * Created by mertsimsek on 20/04/16.
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity{
         switch (view.getId()){
             case R.id.buttonBasicBinding:
                 intent = new Intent(MainActivity.this, BasicBindingActivity.class);
+                break;
+            case R.id.buttonLayoutDetails:
+                intent = new Intent(MainActivity.this, LayoutDetailsActivity.class);
                 break;
         }
         startActivity(intent);

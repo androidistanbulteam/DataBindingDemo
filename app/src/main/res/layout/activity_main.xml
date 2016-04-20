@@ -20,6 +20,14 @@
             android:onClick="@{activity.onButtonClicked}"
             android:text="@string/textBasicBinding" />
 
+        <Button
+            android:id="@+id/buttonLayoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity.onButtonClicked}"
+            android:text="@string/textLayoutDetails" />
+
+
     </LinearLayout>
 
 </layout>
