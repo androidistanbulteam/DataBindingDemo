@@ -118,6 +118,11 @@
 
             </LinearLayout>
 
+            <!-- Format strings-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/nameSentence(user.name, user.surname)}"/>
 
 
         </LinearLayout>
