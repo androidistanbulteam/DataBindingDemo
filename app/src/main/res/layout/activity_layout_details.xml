@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
 
-    <data>
+    <data class="DetailBinding">
 
         <import type="android.view.View" />
 
@@ -78,12 +78,13 @@
                 android:text="@{userList[index].name + ' ' + userList[index].surname}"/>
 
             <!-- Static class-->
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@{StringUtils.capitalizeFirstLetter(userList[index].name)}"/>
+
+
 
         </LinearLayout>
 
