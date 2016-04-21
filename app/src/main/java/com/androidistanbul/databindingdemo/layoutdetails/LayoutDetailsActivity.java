@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.androidistanbul.databindingdemo.R;
 import com.androidistanbul.databindingdemo.databinding.ActivityLayoutDetailsBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by mertsimsek on 20/04/16.
  */
@@ -17,12 +20,21 @@ public class LayoutDetailsActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         ActivityLayoutDetailsBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_layout_details);
 
-        DetailedUser detailedUser = new DetailedUser();
-        detailedUser.setName("Mert");
-        detailedUser.setSurname("Simsek");
-        detailedUser.setIsAdult(false);
-        detailedUser.setAge(20);
-        binding.setUser(detailedUser);
+        List<DetailedUser> detailedUserList = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            DetailedUser detailedUser = new DetailedUser();
+            detailedUser.setName("mert");
+            detailedUser.setSurname("simsek");
+            detailedUser.setIsAdult(false);
+            detailedUser.setAge(20);
+            detailedUserList.add(detailedUser);
+        }
+
+        binding.setUser(detailedUserList.get(0));
+
+        binding.setIndex(0);
+        binding.setUserList(detailedUserList);
 
     }
 }

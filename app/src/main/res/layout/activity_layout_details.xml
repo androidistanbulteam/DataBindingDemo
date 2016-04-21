@@ -3,10 +3,25 @@
     xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
+        <import type="com.androidistanbul.databindingdemo.layoutdetails.DetailedUser" />
+
+        <import type="java.util.List" />
+
+        <import type="com.androidistanbul.databindingdemo.layoutdetails.StringUtils"/>
+
         <variable
             name="user"
-            type="com.androidistanbul.databindingdemo.layoutdetails.DetailedUser"/>
+            type="DetailedUser" />
+        <variable
+            name="userList"
+            type="List&lt;DetailedUser>"/>
+
+        <variable
+            name="index"
+            type="int"/>
 
     </data>
 
@@ -24,30 +39,51 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/detailHeaderImports"
-                android:textSize="@dimen/detailHeaderSize"
                 android:textAllCaps="true"
-                android:textStyle="bold"/>
+                android:textSize="@dimen/detailHeaderSize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/black" />
 
 
             <!-- Visibility -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:layout_marginTop="8dp">
 
                 <ImageView
                     android:layout_width="@dimen/avatarSize"
                     android:layout_height="@dimen/avatarSize"
                     android:src="@drawable/icon_offline"
-                    bind:visibility="@{user.isAdult ? View.VISIBLE : View.INVISIBLE}"/>
+                    bind:visibility="@{user.isAdult ? View.VISIBLE : View.INVISIBLE}" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/detailContentVisibility"/>
+                    android:text="@string/detailContentVisibility" />
 
             </LinearLayout>
+
+            <!-- List index-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{userList[index].name + ' ' + userList[index].surname}"/>
+
+            <!-- Static class-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{StringUtils.capitalizeFirstLetter(userList[index].name)}"/>
 
         </LinearLayout>
 
