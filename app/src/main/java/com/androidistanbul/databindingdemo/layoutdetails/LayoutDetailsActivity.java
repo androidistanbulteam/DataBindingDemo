@@ -27,7 +27,6 @@ public class LayoutDetailsActivity extends AppCompatActivity{
             detailedUser.setName("mert");
             detailedUser.setSurname("simsek");
             detailedUser.setIsAdult(false);
-            detailedUser.setAge(20);
             detailedUserList.add(detailedUser);
         }
 
