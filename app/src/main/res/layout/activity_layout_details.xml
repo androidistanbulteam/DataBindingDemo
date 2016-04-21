@@ -98,6 +98,28 @@
                 android:layout_marginTop="8dp"
                 android:text='@{user.address ?? "Address not found"}'/>
 
+            <!-- Using resources-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="@dimen/avatarSize"
+                    android:layout_height="@dimen/avatarSize"
+                    android:background="@{user.isOnline ? @drawable/icon_online : @drawable/icon_offline}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{user.isOnline ? @string/online : @string/offline}"/>
+
+            </LinearLayout>
+
+
+
         </LinearLayout>
 
     </ScrollView>

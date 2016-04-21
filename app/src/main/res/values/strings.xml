@@ -9,4 +9,7 @@
     <string name="detailHeaderImports">imports</string>
 
     <string name="detailContentVisibility">visibility example</string>
+
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
 </resources>

@@ -14,6 +14,7 @@ public class DetailedUser extends BaseObservable{
     int age;
     boolean isAdult;
     String address;
+    boolean isOnline;
 
     @Bindable
     public String getName() {
@@ -61,5 +62,15 @@ public class DetailedUser extends BaseObservable{
     public void setAddress(String address) {
         this.address = address;
         notifyPropertyChanged(BR.address);
+    }
+
+    @Bindable
+    public boolean isOnline() {
+        return isOnline;
+    }
+
+    public void setIsOnline(boolean isOnline) {
+        this.isOnline = isOnline;
+        notifyPropertyChanged(BR.online);
     }
 }
