@@ -30,13 +30,14 @@ public class LayoutDetailsActivity extends AppCompatActivity{
             DetailedUser detailedUser = new DetailedUser();
             detailedUser.setName("mert");
             detailedUser.setSurname("simsek");
+            detailedUser.setIsOnline(true);
             detailedUser.setIsAdult(false);
             detailedUserList.add(detailedUser);
         }
 
+        binding.setUser(null);
         binding.setUser(detailedUserList.get(0));
 
-        binding.setUser(null);
 
         binding.setIndex(0);
         binding.setUserList(detailedUserList);

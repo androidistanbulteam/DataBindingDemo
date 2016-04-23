@@ -1,7 +1,9 @@
 package com.androidistanbul.databindingdemo.basic;
 
 import android.databinding.BindingAdapter;
+import android.databinding.BindingConversion;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -17,6 +19,11 @@ public class BindingUtils {
                 .load(url)
                 .error(error)
                 .into(view);
+    }
+
+    @BindingConversion
+    public static int booleanToVisibility(boolean booleanValue){
+        return booleanValue ? View.VISIBLE : View.INVISIBLE;
     }
 
 }

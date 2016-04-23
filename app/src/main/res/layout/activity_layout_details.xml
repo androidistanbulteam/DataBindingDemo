@@ -118,6 +118,12 @@
                 android:layout_height="wrap_content"
                 android:text="@{@string/nameSentence(user.name, user.surname)}" />
 
+            <!-- custom conversions-->
+            <ImageView
+                android:layout_width="@dimen/avatarSize"
+                android:layout_height="@dimen/avatarSize"
+                android:src="@drawable/icon_profile"
+                bind:visibility="@{user.isOnline}"/>
 
         </LinearLayout>
 
