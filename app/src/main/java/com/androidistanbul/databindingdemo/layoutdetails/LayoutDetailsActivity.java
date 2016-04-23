@@ -18,7 +18,11 @@ public class LayoutDetailsActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DetailBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_layout_details);
+
+        DetailBinding binding =
+                DataBindingUtil.setContentView(
+                        this,
+                        R.layout.activity_layout_details);
 
         List<DetailedUser> detailedUserList = new ArrayList<>();
 
@@ -31,6 +35,8 @@ public class LayoutDetailsActivity extends AppCompatActivity{
         }
 
         binding.setUser(detailedUserList.get(0));
+
+        binding.setUser(null);
 
         binding.setIndex(0);
         binding.setUserList(detailedUserList);

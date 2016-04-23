@@ -4,25 +4,19 @@
 
     <data class="DetailBinding">
 
-        <import type="android.view.View" />
+        <import alias="v" type="android.view.View" />
 
         <import type="com.androidistanbul.databindingdemo.layoutdetails.DetailedUser" />
 
         <import type="java.util.List" />
 
-        <import type="com.androidistanbul.databindingdemo.layoutdetails.StringUtils"/>
+        <import type="com.androidistanbul.databindingdemo.layoutdetails.StringUtils" />
 
-        <variable
-            name="user"
-            type="DetailedUser" />
-        <variable
-            name="userList"
-            type="List&lt;DetailedUser>"/>
+        <variable name="user" type="DetailedUser" />
 
-        <variable
-            name="index"
-            type="int"/>
+        <variable name="userList" type="List&lt;DetailedUser>" />
 
+        <variable name="index" type="int" />
     </data>
 
     <ScrollView
@@ -53,15 +47,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="@dimen/avatarSize"
                     android:layout_height="@dimen/avatarSize"
                     android:src="@drawable/icon_offline"
-                    bind:visibility="@{user.isAdult ? View.VISIBLE : View.INVISIBLE}" />
+                    bind:visibility="@{user.isAdult ? v.VISIBLE : v.INVISIBLE}" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,46 +69,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@{userList[index].name + ' ' + userList[index].surname}"/>
+                android:text="@{userList[index].name + ' ' + userList[index].surname}" />
 
             <!-- Static class-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@{StringUtils.capitalizeFirstLetter(userList[index].name)}"/>
+                android:text="@{StringUtils.capitalizeFirstLetter(userList[index].name)}" />
 
             <!-- No Null check-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text='@{"Adress Info: " + user.address}'/>
+                android:text='@{"Adress Info: " + user.address}' />
 
             <!-- Null Coalescing Operator-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text='@{user.address ?? "Address not found"}'/>
+                android:text='@{user.address != null ? user.address : "Address not found"}' />
 
             <!-- Using resources-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="@dimen/avatarSize"
                     android:layout_height="@dimen/avatarSize"
-                    android:background="@{user.isOnline ? @drawable/icon_online : @drawable/icon_offline}"/>
+                    android:background="@{user.isOnline ? @drawable/icon_online : @drawable/icon_offline}" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{user.isOnline ? @string/online : @string/offline}"/>
+                    android:text="@{user.isOnline ? @string/online : @string/offline}" />
 
             </LinearLayout>
 
@@ -122,7 +116,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{@string/nameSentence(user.name, user.surname)}"/>
+                android:text="@{@string/nameSentence(user.name, user.surname)}" />
 
 
         </LinearLayout>
