@@ -9,6 +9,7 @@ import android.databinding.ObservableField;
 public class User {
     public final ObservableField<String> name = new ObservableField<>();
     public final ObservableField<String> surname = new ObservableField<>();
+    public final ObservableField<String> image = new ObservableField<>();
 
     public User(String name, String surname) {
         this.name.set(name);

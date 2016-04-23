@@ -24,6 +24,7 @@ public class BasicBindingActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         ActivityBasicBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_basic_binding);
         user = new User("Mert","SIMSEK");
+        user.image.set("https://avatars3.githubusercontent.com/u/11799296?v=3&s=200");
         binding.setUser(user);
 
         userMap.put("firstname", "Mert");
