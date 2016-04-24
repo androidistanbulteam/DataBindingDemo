@@ -27,6 +27,12 @@
             android:onClick="@{activity.onButtonClicked}"
             android:text="@string/textLayoutDetails" />
 
+        <Button
+            android:id="@+id/buttonLayoutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity.onButtonClicked}"
+            android:text="@string/textLogin" />
 
     </LinearLayout>
 

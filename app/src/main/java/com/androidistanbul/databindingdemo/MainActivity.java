@@ -9,6 +9,7 @@ import android.view.View;
 import com.androidistanbul.databindingdemo.basic.BasicBindingActivity;
 import com.androidistanbul.databindingdemo.databinding.ActivityMainBinding;
 import com.androidistanbul.databindingdemo.layoutdetails.LayoutDetailsActivity;
+import com.androidistanbul.databindingdemo.login.LoginActivity;
 
 /**
  * Created by mertsimsek on 20/04/16.
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity{
                 break;
             case R.id.buttonLayoutDetails:
                 intent = new Intent(MainActivity.this, LayoutDetailsActivity.class);
+                break;
+            case R.id.buttonLayoutLogin:
+                intent = new Intent(MainActivity.this, LoginActivity.class);
                 break;
         }
         startActivity(intent);

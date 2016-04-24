@@ -4,6 +4,7 @@
     <!-- activity descriptions -->
     <string name="textBasicBinding">basic user binding</string>
     <string name="textLayoutDetails">layout details binding</string>
+    <string name="textLogin">Login</string>
 
     <!-- detail headers-->
     <string name="detailHeaderImports">imports</string>
@@ -14,5 +15,9 @@
     <string name="offline">Offline</string>
 
     <string name="nameSentence">I am %1$s %2$s</string>
+
+    <string name="login">Login</string>
+    <string name="hintEmail">Enter your e-mail</string>
+    <string name="hintPassword">Enter your password</string>
 
 </resources>
