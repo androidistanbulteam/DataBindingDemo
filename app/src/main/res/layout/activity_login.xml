@@ -5,9 +5,9 @@
         <variable
             name="viewModel"
             type="com.androidistanbul.databindingdemo.login.LoginViewModel"/>
-        
+
     </data>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,8 +35,7 @@
             android:text="@string/login"
             android:onClick="@{viewModel.onLoginClicked}"
             android:enabled="@{viewModel.loginRequest.isValid}"
-            android:textColor="@android:color/white"
-            android:theme="@style/AppButton"/>
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 

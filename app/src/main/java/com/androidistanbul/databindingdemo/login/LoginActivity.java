@@ -11,12 +11,16 @@ import com.androidistanbul.databindingdemo.databinding.ActivityLoginBinding;
 /**
  * Created by mertsimsek on 24/04/16.
  */
-public class LoginActivity extends AppCompatActivity implements LoginViewModel.LoginListener{
+
+public class LoginActivity extends AppCompatActivity
+        implements LoginViewModel.LoginListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+
+        ActivityLoginBinding binding = DataBindingUtil
+                .setContentView(this, R.layout.activity_login);
         binding.setViewModel(new LoginViewModel(this));
     }
 
